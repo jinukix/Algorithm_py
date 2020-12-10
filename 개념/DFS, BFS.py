@@ -1,8 +1,4 @@
 """
-
-탐색이란 많은 양의 데이터 중에서 원하는 데이터를 찾는 과정을 말한다.
-대표적인 탐색 알고리즘으로는 DFS와 BFS를 꼽을 수 있다
-
 1. DFS 깊이 우선 탐색.
 
 Depth-First Search.
@@ -15,34 +11,34 @@ BFS보다는 조금 느리게 동작한다.
 DFS 예제
 """
 
-from collections import deque
+# from collections import deque
 import sys
-sys.setrecursionlimit(50000)  # 재귀제한높이설정(기본값이상으로 안해주면 런타임에러) ※기본값:1000
+# sys.setrecursionlimit(50000)  # 재귀제한높이설정(기본값이상으로 안해주면 런타임에러) ※기본값:1000
 
 
-def dfs(graph, v, visited):
-    visited[v] = True
-    print(v, end=" ")
-    for i in graph[v]:
-        if not visited[i]:
-            dfs(graph, i, visited)
+# def dfs(graph, v, visited):
+#     visited[v] = True
+#     print(v, end=" ")
+#     for i in graph[v]:
+#         if not visited[i]:
+#             dfs(graph, i, visited)
 
 
-graph = [
-    [],
-    [2, 3, 8],
-    [1, 7],
-    [1, 4, 5],
-    [3, 5],
-    [3, 4],
-    [7],
-    [2, 6, 8],
-    [1, 7]
-]
+# graph = [
+#     [],
+#     [2, 3, 8],
+#     [1, 7],
+#     [1, 4, 5],
+#     [3, 5],
+#     [3, 4],
+#     [7],
+#     [2, 6, 8],
+#     [1, 7]
+# ]
 
-visited = [False for i in range(9)]
+# visited = [False for i in range(9)]
 
-dfs(graph, 1, visited)
+# dfs(graph, 1, visited)
 
 
 """
@@ -61,34 +57,34 @@ BFS 예제
 """
 
 
-def bfs(graph, start, visited):
-    queue = deque([start])
-    visited[start] = True
+# def bfs(graph, start, visited):
+#     queue = deque([start])
+#     visited[start] = True
 
-    while queue:  # 큐가 빌 때까지.
-        v = queue.popleft()
-        print(v, end=" ")
-        for i in graph[v]:
-            if not visited[i]:
-                queue.append(i)
-                visited[i] = True
+#     while queue:  # 큐가 빌 때까지.
+#         v = queue.popleft()
+#         print(v, end=" ")
+#         for i in graph[v]:
+#             if not visited[i]:
+#                 queue.append(i)
+#                 visited[i] = True
 
 
-graph = [
-    [],
-    [2, 3, 8],
-    [1, 7],
-    [1, 4, 5],
-    [3, 5],
-    [3, 4],
-    [7],
-    [2, 6, 8],
-    [1, 7]
-]
+# graph = [
+#     [],
+#     [2, 3, 8],
+#     [1, 7],
+#     [1, 4, 5],
+#     [3, 5],
+#     [3, 4],
+#     [7],
+#     [2, 6, 8],
+#     [1, 7]
+# ]
 
-visited = [False for i in range(9)]
+# visited = [False for i in range(9)]
 
-bfs(graph, 1, visited)
+# bfs(graph, 1, visited)
 
 """
 
