@@ -7,6 +7,8 @@ def read():
 
 
 n = read().rstrip()
+
+print(n)
 num = [0 for i in range(9)]
 cnt = 0
 
@@ -20,3 +22,7 @@ for i in range(len(n)):
 
 num[6] = math.ceil(num[6])  # 올림
 print(int(max(num))) 
+
+
+# ctrl alt m
+# ctrl alt l
