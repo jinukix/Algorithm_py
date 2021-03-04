@@ -13,7 +13,7 @@ DFS 예제
 
 # from collections import deque
 import sys
-# sys.setrecursionlimit(50000)  # 재귀제한높이설정(기본값이상으로 안해주면 런타임에러) ※기본값:1000
+# sys.setrecursionlimit(50000)  # 재귀제한높이설정(기본값이상으로 안해주면 런타임에러) ※ 기본값: 1000
 
 
 # def dfs(graph, v, visited):

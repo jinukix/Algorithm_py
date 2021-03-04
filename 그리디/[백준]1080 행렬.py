@@ -3,8 +3,8 @@ input = sys.stdin.readline
 
 n, m = map(int, input().split())
 
-a = [list(map(int, input().strip())) for i in range(n)]
-b = [list(map(int, input().strip())) for i in range(n)]
+a = [list(map(int, input().strip())) for _ in range(n)]
+b = [list(map(int, input().strip())) for _ in range(n)]
 
 cnt = 0
 

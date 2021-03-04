@@ -77,7 +77,6 @@ print(array)
 """
 array = [7, 5, 2, 8, 1, 9, 0, 4, 3, 6]
 
-
 def quick_sort(array, start, end):
     if start >= end:  # 원소가 1개 인 경우 break
         return
@@ -98,7 +97,6 @@ def quick_sort(array, start, end):
 
     quick_sort(array, start, right-1)
     quick_sort(array, right+1, end)
-
 
 quick_sort(array, 0, len(array)-1)
 print(array)
