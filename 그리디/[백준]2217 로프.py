@@ -1,18 +1,22 @@
+import sys
+
+def read():
+    return sys.stdin.readline()
+
 import heapq
 
-n = int(input())
-p = []
+n = int(read())
+q = []
 w = 0
 maxW = 0
 
-
 for i in range(n):
-    heapq.heappush(p, int(input()))
+    heapq.heappush(q, int(read()))
 
-roaf_cnt = len(p)
+roaf_cnt = len(q)
 
 for i in range(roaf_cnt):
-    s = heapq.heappop(p)
+    s = heapq.heappop(q)
     w = s*roaf_cnt
     roaf_cnt -= 1
 

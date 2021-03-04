@@ -1,11 +1,11 @@
 import sys
-input = sys.stdin.readline
 
-n = int(input())
+def read():
+    return sys.stdin.readline()
 
-w = []
-w = list(map(int, input().split()))
+n = int(read())
 
+w = list(map(int, read().split()))
 w.sort()
 
 minw = 1

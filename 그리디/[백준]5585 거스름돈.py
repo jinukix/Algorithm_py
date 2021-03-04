@@ -1,4 +1,9 @@
-n = int(input())
+import sys
+
+def read():
+    return sys.stdin.readline().strip()
+
+n = int(read())
 coin = [500, 100, 50, 10, 5, 1]
 
 cnt = 0

@@ -1,5 +1,7 @@
 import sys
-input = sys.stdin.readline
+
+def read():
+    return sys.stdin.readline
 
 t = int(input())
 ans = []
@@ -12,7 +14,7 @@ for i in range(t):
     for i in range(n):
         a, b = map(int, input().split())
         data[a] = b
-
+    
     min_r = data[1]
     cnt = 1
 
