@@ -1,7 +1,10 @@
-n, l = map(int, input().split())
+import sys
 
-data = list(map(int, input().split()))
+def read():
+    return sys.stdin.readline()
 
+n, l = map(int, read().split())
+data = list(map(int, read().split()))
 data.sort()
 
 start = data[0]

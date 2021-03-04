@@ -1,11 +1,13 @@
 import sys
-input = sys.stdin.readline
 
-n = int(input())
+def read():
+    return sys.stdin.readline()
+
+n = int(read())
 data = []
 
 for i in range(n):
-    data.append(list(input().strip()))
+    data.append(list(read().strip()))
 
 alpha = [0 for i in range(26)]
 

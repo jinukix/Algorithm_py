@@ -1,13 +1,14 @@
 import sys
-input = sys.stdin.readline
 
-n, m = map(int, input().split())
+def read():
+    return sys.stdin.readline()
 
-a = [list(map(int, input().strip())) for _ in range(n)]
-b = [list(map(int, input().strip())) for _ in range(n)]
+n, m = map(int, read().split())
+
+a = [list(map(int, read().strip())) for _ in range(n)]
+b = [list(map(int, read().strip())) for _ in range(n)]
 
 cnt = 0
-
 
 def change(i, j):
     for y in range(3):

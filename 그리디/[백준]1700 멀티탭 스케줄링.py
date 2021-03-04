@@ -1,9 +1,7 @@
 import sys
 
-
 def read():
     return sys.stdin.readline().strip()
-
 
 n, k = map(int, read().split())
 data = list(map(int, read().split()))

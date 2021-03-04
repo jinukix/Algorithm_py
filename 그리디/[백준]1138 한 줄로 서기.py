@@ -1,22 +1,20 @@
 import sys
-input = sys.stdin.readline
 
-n = int(input())
+def read():
+    return sys.stdin.readline()
 
-data = list(map(int, input().split()))
+n = int(read())
+data = list(map(int, read().split()))
 
-p = [0 for i in range(n)]
-
-key = 1
+p = [0 for _ in range(n)]
 
 for i in range(n):
-    cnt = 0
+    cnt = 0 
     for j in range(n):
-        if cnt == data[i] and p[j] == 0:
-            p[j] = key
-            key += 1
+        if cnt == data[i] and not p[j]:
+            p[j] = i+1
             break
-        elif p[j] == 0:
+        elif not p[j]:
             cnt += 1
 
 for i in range(n):

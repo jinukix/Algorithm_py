@@ -1,8 +1,10 @@
 import sys
-input = sys.stdin.readline
 
-n = int(input())
-data = [int(input()) for i in range(n)]
+def read():
+    return sys.stdin.readline
+
+n = int(read())
+data = [int(read()) for i in range(n)]
 
 plus = []
 minus = []

@@ -1,17 +1,18 @@
-data = list(input().split("-"))  # split("-") - 으로 구분.
+import sys
 
-num = []
+def read():
+    return sys.stdin.readline()
 
-for i in data:
-    cnt = 0
-    data = i.split('+')
-    for j in data:
-        cnt += int(j)
-    num.append(cnt)
+data = read().split("-")
+ans  = 0
 
-n = num[0]
+for i in data[0].split("+"):
+    ans += int(i)
 
-for i in range(1, len(num)):
-    n -= num[i]
+for i in data[1:]:
+    minus = i.split("+")
+    l = len(minus)
+    for j in range(l):
+        ans -= int(minus[j])
 
-print(n)
+print(ans)
