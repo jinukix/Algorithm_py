@@ -1,6 +1,4 @@
-# https://www.acmicpc.net/problem/2579
-
-'''python
+'''
 마지막 도착 계단은 반드시 밟아야한다. 그렇다면 두가지의 경우가 있다.
 마지막 계단을 n번째 라고 했을때
 1. n-1번째 계단을 밟은 경우
@@ -13,7 +11,6 @@ n-2번째 계단은 반드시 밟아야한다.
 '''
 
 import sys
-
 
 def read():
     return sys.stdin.readline().strip()

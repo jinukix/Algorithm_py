@@ -1,8 +1,7 @@
-import sys
-
-
 # http://melonicedlatte.com/algorithm/2018/03/15/181550.html
 # 문제가 너무어렵다 위에거 참고해서 풀었음.
+
+import sys
 
 def read():
     return sys.stdin.readline().strip()

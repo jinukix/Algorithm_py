@@ -1,6 +1,4 @@
-# https://www.acmicpc.net/problem/10844
-
-'''python
+'''
 맨 뒤에 올수 있는 숫자를 기준으로 풀면된다.
 dp[i][j] = i번째 자리에 j숫자가 마지막으로 오는 경우의 수
 세가지 경우의 수가 있다.
@@ -10,11 +8,9 @@ dp[i][j] = i번째 자리에 j숫자가 마지막으로 오는 경우의 수
 -> dp[i-1][8]
 3. j == 1~8 
 -> dp[i-1][j-1] + dp[i-1][j+1] 
-
 '''
 
 import sys
-
 
 def read():
     return sys.stdin.readline().strip()

@@ -1,6 +1,4 @@
-# https://www.acmicpc.net/problem/2193
-
-'''python
+'''
 이친수들의 규칙을보면 10으로 시작한다는 것을 알 수 있다.
 10ㅁㅁㅁㅁ...
 10이후의 패턴만 찾아주면 쉽게 풀수있다.
@@ -11,17 +9,13 @@ for문을 돌려주기전에 dp[1] = 1이라고 써놓은것 때문이였다.T.T
 
 import sys
 
-
 def read():
     return sys.stdin.readline().strip()
 
 
 n = int(input())
-
 dp = [0 for i in range(n)]
-
 dp[0] = 1
-#dp[1] = 1
 
 for i in range(1, n):
     if i == 1:

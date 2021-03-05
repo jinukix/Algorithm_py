@@ -1,6 +1,4 @@
-# https://www.acmicpc.net/problem/1463
-
-'''python
+'''
 dp를 2차원 배열로 두가지 값을 저장해서 풀었다.
 dp[i][0] = i번째 까지의 값을 더한 값. 음수가 됬다면 0으로 초기화.
 dp[i][1] = i번째 까지의 최댓값
@@ -16,7 +14,6 @@ dp[i][1] = i번째 까지의 최댓값
 
 import sys
 
-
 def read():
     return sys.stdin.readline().strip()
 
@@ -30,7 +27,6 @@ dp[0][0] = num[0]
 dp[0][1] = num[0]
 
 for i in range(1, n):
-
     dp[i][0] = max(dp[i-1][0] + num[i], 0)  # 마지막 수를 포함. 음수라면 0으로
     dp[i][1] = max(dp[i-1][1], dp[i][0])  # 최대수
 

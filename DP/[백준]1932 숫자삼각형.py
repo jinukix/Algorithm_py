@@ -1,6 +1,4 @@
-# https://www.acmicpc.net/problem/1932
-
-'''python
+'''
 dp배열을 2차원 배열로 만드는것이 포인트이다.
 dp[i][j]가 i번째 층에서 j번째 원소를 포함한 경우의 합이라고 할 떄
 1.현재층에서 첫번째 원소를 포함한 경우
@@ -12,7 +10,6 @@ dp[i][j]가 i번째 층에서 j번째 원소를 포함한 경우의 합이라고
 '''
 
 import sys
-
 
 def read():
     return sys.stdin.readline().strip()

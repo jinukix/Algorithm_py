@@ -1,7 +1,4 @@
-#### 문제링크 <https://www.acmicpc.net/problem/9465>
-
-## 풀이
-
+"""
 # sticker[i][0] = i번째에 첫째 줄 스티커의 점수,
 # sticker[i][1] = i번째에 둘째 줄 스티커의 점수이다.
 
@@ -10,8 +7,7 @@
 # -> dp[i][0] = max(dp[i-1][0], sticker[i][0] + dp[i-1][1])
 
 # 둘째 줄도 마찬가지로 계산해주면 된다.
-
-# ~~~python
+"""
 
 import sys
 
@@ -45,5 +41,3 @@ for i in range(t):
         dp[i][1] = max(dp[i-1][1], sticker[i][1] + dp[i-1][0])
 
     print(max(dp[n-1]))
-
-~~~
