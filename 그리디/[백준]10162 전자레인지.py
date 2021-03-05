@@ -1,5 +1,8 @@
 import sys
-input = sys.stdin.readline
+
+def read():
+    return sys.stdin.readline().strip()
+
 
 t = int(input())
 

@@ -17,16 +17,13 @@
 
 import sys
 
-
 def read():
     return sys.stdin.readline().strip()
-
 
 n, c = map(int, read().split())
 m = int(read())
 
 village = [c for i in range(n-1)]
-
 
 data = []
 

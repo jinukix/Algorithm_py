@@ -1,6 +1,5 @@
 import sys
 
-
 def read():
     return sys.stdin.readline().strip()
 
@@ -10,7 +9,7 @@ test = int(read())
 for i in range(test):
     a, b = map(int, read().split())
 
-    books = [False] * a
+    books = [False for i in range(a)]
 
     data = []
 

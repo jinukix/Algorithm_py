@@ -3,10 +3,11 @@ import sys
 def read():
     return sys.stdin.readline()
 
+
 n = int(read())
 
 data = list(map(int, read().split()))
-dp = [0] * n
+dp = [0 for i in range(n)]
 
 dp[0] = 1
 

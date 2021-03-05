@@ -1,7 +1,6 @@
 import sys
 import heapq
 
-
 def read():
     return sys.stdin.readline().strip()
 

@@ -1,6 +1,4 @@
-# https://www.acmicpc.net/problem/1699
 import sys
-
 
 def read():
     return sys.stdin.readline().strip()

@@ -14,7 +14,8 @@
 import sys
 import heapq
 
-read = sys.stdin.readline
+def read():
+    return sys.stdin.readline().strip()
 
 
 n = int(read())

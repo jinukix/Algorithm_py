@@ -1,13 +1,12 @@
 import sys
 
-
 def read():
     return sys.stdin.readline().strip()
 
 
-test = int(read())
+t = int(read())
 
-for t in range(test):
+for _ in range(t):
     n = int(read())
 
     data = list(map(int, read().split()))
