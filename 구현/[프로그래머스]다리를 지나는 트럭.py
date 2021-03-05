@@ -2,22 +2,25 @@ from collections import deque
 
 
 def solution(bridge_length, weight, truck_weights):
-    time = 0
-    q = deque([0] * bridge_length)
-    truck_weights = deque(truck_weights)
 
-    while q:
-        time += 1
-        q.popleft()
+    bridge = deque([0 for i in range(bridge_length)])
+    time = 0
+    current_w = 0
+
+    while bridge:
+        time+=1
+        current_w -= bridge[0]
+        bridge.popleft()
 
         if truck_weights:
-            if sum(q) + truck_weights[0] <= weight:
-                q.append(truck_weights.popleft())
+            if truck_weights[-1] + current_w <= weight:
+                current_w += truck_weights[-1]
+                bridge.append(truck_weights.pop())
             else:
-                q.append(0)
+                bridge.append(0)
 
     return time
-
+            
 
 bridge_length = 2
 weight = 10
