@@ -1,13 +1,11 @@
 import sys
 
-
 def read():
     return sys.stdin.readline()
 
 
 n = int(read())
 cnt = 0
-
 
 for i in range(n):
     word = read()

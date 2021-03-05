@@ -1,7 +1,6 @@
 import sys
 import math
 
-
 def read():
     return sys.stdin.readline()
 
@@ -22,7 +21,3 @@ for i in range(len(n)):
 
 num[6] = math.ceil(num[6])  # 올림
 print(int(max(num))) 
-
-
-# ctrl alt m
-# ctrl alt l
