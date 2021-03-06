@@ -1,35 +1,19 @@
-# ?? 왜 틀린지 모르겠음..
-
-from collections import deque
-from math import ceil
-
+import math
 
 def solution(progresses, speeds):
-
-    q = deque()
-    answer = []
-
+    li = []
+    time = 0
+    ans = []
+    
     for i in range(len(progresses)):
-        x = ceil((100 - progresses[i]) / speeds[i])
-        q.append(x)
+        li.append(math.ceil((100 - progresses[i]) / speeds[i]))
 
-    t = 0
+    for i in range(len(li)):
 
-    while q:
-        t += q.popleft()
-        cnt = 1
+        if time < li[i]:
+            time += (li[i] - time)
+            ans.append(1)
+        else:
+            ans[-1] += 1
 
-        while q:
-            if t < q[0]:
-                break
-
-            q.popleft()
-            cnt += 1
-
-        answer.append(cnt)
-    return answer
-
-
-progresses = [99, 1]
-speeds = [1, 99]
-print(solution(progresses, speeds))
+    return ans
