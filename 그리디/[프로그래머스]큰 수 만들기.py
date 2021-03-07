@@ -1,22 +1,14 @@
-
 def solution(number, k):
-
     stack = [number[0]]
 
-    for i in number[1:]:
-
-        while len(stack) > 0 and stack[-1] < i and k > 0:
+    for num in number[1:]:
+        while stack and stack[-1] < num and k:
             k -= 1
             stack.pop()
 
-        stack.append(i)
+        stack.append(num)
 
-    if k != 0:
+    if k:
         stack = stack[:-k]
 
     return ''.join(stack)
-
-
-# number = '417725284'
-# k = 4
-# print(solution(number, k))
