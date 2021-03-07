@@ -1,6 +1,5 @@
 from itertools import permutations
 
-
 def solution(numbers):
 
     per = []
@@ -8,19 +7,21 @@ def solution(numbers):
         per.append(list(map(''.join, permutations(numbers, i))))
 
     nums = []
-    answer = 0
+    ans = 0
 
     for i in per:
         for j in i:
             n = int(j)
             if n >= 2 and n not in nums:
                 nums.append(n)
-                answer += 1
+                ans += 1
 
     for i in nums:
         for j in range(2, i):
             if i % j == 0:
-                answer -= 1
+                ans -= 1
                 break
 
-    return answer
+    return ans
+
+print(solution("17"))

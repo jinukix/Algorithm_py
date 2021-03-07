@@ -6,7 +6,7 @@ def solution(scoville, K):
     heapq.heapify(scoville)
     cnt = 0
 
-    while scoville:
+    while True:
 
         if scoville[0] >= K:
             return cnt
@@ -20,9 +20,3 @@ def solution(scoville, K):
         heapq.heappush(scoville, a+(b*2))
 
         cnt += 1
-
-
-scoville = [1, 2, 3, 9, 10, 12]
-K = 7
-
-print(solution(scoville, K))
