@@ -1,4 +1,4 @@
-def DFS(numbers, target, value, idx):
+def dfs(numbers, target, value, idx):
 
     global answer
     l = len(numbers)
@@ -8,12 +8,12 @@ def DFS(numbers, target, value, idx):
             answer += 1
         return
 
-    DFS(numbers, target, value + numbers[idx], idx+1)
-    DFS(numbers, target, value - numbers[idx], idx+1)
+    dfs(numbers, target, value + numbers[idx], idx+1)
+    dfs(numbers, target, value - numbers[idx], idx+1)
 
 
 def solution(numbers, target):
     global answer
     answer = 0
-    DFS(numbers, target, 0, 0)
+    dfs(numbers, target, 0, 0)
     return answer
