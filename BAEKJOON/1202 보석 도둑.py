@@ -1,8 +1,10 @@
 import sys
 import heapq
 
+
 def read():
     return sys.stdin.readline().strip()
+
 
 n, k = map(int, read().split())
 dia = []

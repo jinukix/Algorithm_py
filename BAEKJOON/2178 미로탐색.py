@@ -33,4 +33,4 @@ graph = [list(map(int, read())) for i in range(n)]
 
 bfs(0, 0)
 
-print(graph[n-1][m-1])
+print(graph[n - 1][m - 1])

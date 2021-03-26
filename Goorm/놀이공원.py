@@ -1,15 +1,18 @@
 import sys
 
+
 def read():
     return sys.stdin.readline()
 
+
 def check(y, x, k):
     cnt = 0
-    for i in range(y, y+k):
-        for j in range(x, x+k):
+    for i in range(y, y + k):
+        for j in range(x, x + k):
             if maps[i][j] == 1:
                 cnt += 1
     return cnt
+
 
 t = int(read())
 

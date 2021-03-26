@@ -11,7 +11,7 @@ n = int(read())
 ans = []
 
 for i in range(101):
-    num = i*i
+    num = i * i
 
     if m <= num and num <= n:
         ans.append(num)

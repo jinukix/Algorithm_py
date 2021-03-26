@@ -1,7 +1,9 @@
 import sys
 
+
 def read():
     return sys.stdin.readline().strip()
+
 
 n, k = map(int, read().split())
 data = list(map(int, read().split()))
@@ -21,8 +23,8 @@ for i in range(k):
         a = 0
         for j in range(n):
             try:
-                if a < data[i+1:].index(m[j]):
-                    a = data[i+1:].index(m[j])
+                if a < data[i + 1 :].index(m[j]):
+                    a = data[i + 1 :].index(m[j])
                     b = j
             except:
                 b = j

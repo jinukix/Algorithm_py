@@ -1,4 +1,5 @@
 import sys
+
 sys.setrecursionlimit(50000)  # 재귀제한높이설정(기본값이상으로 안해주면 런타임에러) ※기본값:1000
 
 
@@ -10,8 +11,8 @@ def dfs(y, x):
     graph[y][x] = 0
 
     for i in range(4):
-        ny = y+dy[i]
-        nx = x+dx[i]
+        ny = y + dy[i]
+        nx = x + dx[i]
 
         if (ny >= 0 and ny < n) and (nx >= 0 and nx < m):
             if graph[ny][nx] == 1:

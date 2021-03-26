@@ -1,5 +1,6 @@
 import sys
 
+
 def read():
     return sys.stdin.readline()
 
@@ -17,7 +18,7 @@ for _ in range(t):
         if data[0] != max(data):
             data.append(data.pop(0))
             if idx == 0:
-                idx = len(data)-1
+                idx = len(data) - 1
             else:
                 idx -= 1
         else:
