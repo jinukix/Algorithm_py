@@ -12,7 +12,3 @@ def solution(arr):
         arr.append((num1 * num2) // g)
 
     return arr[0]
-
-
-arr = [2,6,8,14]
-print(solution(arr))
