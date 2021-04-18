@@ -1,5 +1,4 @@
 import sys
-from math import gcd
 
 
 def read():
