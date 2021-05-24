@@ -1,5 +1,6 @@
 import sys
 
+
 def read():
     return sys.stdin.readline().strip()
 
@@ -7,12 +8,12 @@ def read():
 x_list = []
 y_list = []
 
-for i in range(3):    
-    x, y = map(int, read().split())
+x, y = 0, 0
 
+for i in range(3):
+    x, y = map(int, read().split())
     x_list.append(x)
     y_list.append(y)
-    
 
 for i in range(3):
     if x_list.count(x_list[i]) == 1:
@@ -20,5 +21,5 @@ for i in range(3):
 
     if y_list.count(y_list[i]) == 1:
         y = y_list[i]
-    
+
 print(x, y)
